@@ -1,5 +1,5 @@
 .container{
-    width: 900px;
+    width: 1600px;
     margin: 0 auto;
     .main-view{
         display: flex;
@@ -24,6 +24,7 @@
                 padding: 8px 12px;
                 border:none;
                 margin-bottom: 1rem;
+                font-size: 1.5rem;
             }
         }
         .bottom-view{
@@ -46,13 +47,19 @@
                     padding-top: 1rem;
                     padding-bottom: 0rem;
                     font-weight: bold;
-                    margin-left: 200px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    .empty{
+                        width: 50%;
+                    }
                     ul{
+                        width: 46%;
                         display: flex;
                         flex-direction: row;
                         list-style-type: none;
                             li{
-                                margin-right: 3rem;
+                                margin-right: 5rem;
                                 font-size: 1.4rem;
                             }
                     }
@@ -68,21 +75,28 @@
                     justify-content: center;
                     padding-top: 2rem;
                     .product-img{
-                        width: 30%;
-                        margin-left: 2rem;
+                        width: 50%;
+                        margin-left: 6rem;
                         display: flex;
                         align-items: center;
+                        .headphones-photo{
+                            margin-left: 100px;
+                        }
                     }
                     .product-info{
+                        width: 50%;
                         display: flex;
                         flex-direction: row;
                         align-items: center;
+                        margin-left: -50px;
                         ul{
                             display: flex;
                             flex-direction: row;
                             list-style-type: none;
+                            align-items: center;
+                            justify-content: space-between;
                                 li{
-                                    margin-right: 3rem;
+                                    margin-right: 7.5rem;
                                     font-size: 1.2rem;
                                     display: flex;
                                     .incdec{
@@ -93,11 +107,12 @@
                                         border: none;
                                         outline: none;
                                     }
-                                    input{
+                                    div{
                                         width: 25px;
                                         outline: none;
                                         border: 1px solid black;
                                         text-align: center;
+                                        line-height: 25px;
                                     }
                                 }
                         }
@@ -105,38 +120,120 @@
                 }
                 .update-button{
                     margin-top: 1rem;
-                    width: 15rem;
                     background-color: black;
+                    width: 20rem;
                     color: white;
-                    padding: 0.5rem;
-                    margin-left: 360px;
+                    padding: 0.5rem 0.8rem;
+                    margin-left: calc(100% - 255px);
                     border: none;
                     cursor: pointer;
+                    font-size: 1.4rem;
                 }
             }
         }
-        .basket-cart{
+        .basket-cart{  
             width: 28%;
             .order{
                 background-color: lightgray;
                 border: 1px solid grey;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                align-items: center;
                 font-weight: bold;
                 height: 30px;
-                align-items: center;
-                padding: 0 0.5rem 0 0.5rem;
+                span{
+                    font-size: 1.5rem;
+                }
+                .mini-container-in-basket{
+                    display: flex;
+                    width: 90%;
+                    margin: 0 auto;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        
+                }
             }
             .cart-total{
+                background-color: rgba(240, 235, 235, 0.924);
+                border: 1px solid grey;
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+        
                 .title{
-                    margin-top: 1rem;
-                    padding: 1rem 0.5rem 1rem 0.5rem;
                     background-color: lightgray;
                     border: 1px solid grey;
                     font-weight: bold;
-                    font-size: 1rem;
+                    font-size: 1.5rem;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    p{
+                        width: 90%;
+                        margin: 0 auto;
+                        font-size: 1.5rem;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                    }
                 }
+                    .mini-container-in-basket{
+                        display: flex;
+                        width: 90%;
+                        margin: 0 auto;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        .position-into-basket{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            width: 100%;
+                            padding-top: 1.5rem;
+                            span{
+                                font-size: 1.6rem;
+                                color: grey;
+                            }
+                            .price{
+                                font-weight: bold;
+                                color: black;
+                            }
+                        }
+                        hr{
+                            width: 100%;
+                    border-color: lightgrey;
+                    height: 0.1px;
+                        }
+                        .resume-basket{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            span{
+                                font-size: 1.6rem;
+                                color: grey;
+    
+                            }
+                            .price{
+                                font-weight: bold;
+                                color: black;
+                            }
+                        }
+                        button{
+                            margin-top: 1.5rem;
+                            width: 100%;
+                        background-color: black;
+                        color: white;
+                        padding: 0.5rem;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        margin-bottom: 2rem;
+                        }
+                    }
+                
+
+                
             }
         }
     }

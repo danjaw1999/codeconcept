@@ -2,7 +2,11 @@ import './App.css';
 import headphones from "./assets/headphones.png";
 import ximg from "./assets/x-img.png";
 import edit from "./assets/edit-img.png";
+import React, { useState } from "react";
 function App() {
+  const [count, setCount] = useState(0);
+  const [value, setValue] = useState(11.90);
+  const [shipping, setshipping] = useState(23.80);
   return (
     <div className="container">
       <div className="main-view">
@@ -15,6 +19,7 @@ function App() {
           <div className="shopping-cart">
             <div className="table-view">
               <div className="specification">
+                <div className="empty"></div>
                 <ul>
                   <li>Product Name</li>
                   <li>Unit Price</li>
@@ -25,16 +30,16 @@ function App() {
               <div className="product">
                 <div className="product-img">
                   <img className="pointer" src={ximg} alt="picture_x" />
-                  <img src={headphones} alt="picture_headphones_list" />
+                  <img src={headphones} className="headphones-photo" alt="picture_headphones_list" />
                 </div>
                 <div className="product-info">
                   <ul>
                     <li>Headphones</li>
-                    <li>$11.90</li>
+                    <li>${value}</li>
                     <li>
-                      <button className="incdec">-</button>
-                      <input type="text" defaultValue="2"></input>
-                      <button className="incdec">+</button>
+                      <button className="incdec" onClick={() => setCount(count - 1)}>-</button>
+                      <div>{count}</div>
+                      <button className="incdec" onClick={() => setCount(count + 1)}>+</button>
                       <img src={edit} alt="edit_icon" className="pointer" />
                     </li>
                   </ul>
@@ -47,23 +52,29 @@ function App() {
           <div className="basket-cart">
 
             <div className="order">
-              <span>SHIPPING</span>
-              <span className="price">$23.80</span>
+              <div className="mini-container-in-basket">
+                <span>SHIPPING</span>
+                <span className="price">${shipping}</span>
+              </div>
             </div>
             <div className="cart-total">
               <div className="title">
-                CART TOTALS
-            </div>
-              <div className="">
-                <span>Subtotal</span>
-                <span className="">$23.80</span>
+                <p>CART TOTALS</p>
               </div>
-              <hr />
-              <div className="">
-                <span>Grand Total</span>
-                <span className="">$23.80</span>
+              <div className="mini-container-in-basket">
+
+
+                <div className="position-into-basket">
+                  <span>Subtotal</span>
+                  <span className="price">${(value * count)}</span>
+                </div>
+                <hr />
+                <div className="resume-basket">
+                  <span>Grand Total</span>
+                  <span className="price">$</span>
+                </div>
+                <button>Proceed to checkout</button>
               </div>
-              <button>Proceed to checkout</button>
             </div>
           </div>
         </div>
