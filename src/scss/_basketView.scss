@@ -1,0 +1,114 @@
+.basket-cart{  
+    width: 28%;
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 2rem;
+           }
+           @media screen and (min-width: 250px) and (max-width: 480px) {
+            width: 100%;
+            margin-top: 2rem;
+           }
+    .order{
+        background-color: lightgray;
+        border: 1px solid grey;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        height: 30px;
+        span{
+            font-size: 1.5rem;
+        }
+        .mini-container-in-basket{
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+                padding-bottom: 1rem;
+                
+        }
+    }
+    .cart-total{
+        background-color: rgba(240, 235, 235, 0.924);
+        border: 1px solid grey;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .title{
+            background-color: lightgray;
+            border: 1px solid grey;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            p{
+                width: 90%;
+                margin: 0 auto;
+                font-size: 1.5rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+            .mini-container-in-basket{
+                display: flex;
+                width: 90%;
+                margin: 0 auto;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .position-into-basket{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding-top: 1.5rem;
+                    span{
+                        font-size: 1.6rem;
+                        color: grey;
+                    }
+                    .price{
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+                hr{
+                    width: 100%;
+            border-color: lightgrey;
+            height: 0.1px;
+                }
+                .resume-basket{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    span{
+                        font-size: 1.6rem;
+                        color: grey;
+
+                    }
+                    .price{
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+                button{
+                    margin-top: 1.5rem;
+                    width: 100%;
+                background-color: black;
+                color: white;
+                padding: 0.5rem;
+                border: none;
+                cursor: pointer;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                }
+            }
+        
+
+        
+    }
+}

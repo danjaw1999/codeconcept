@@ -1,0 +1,166 @@
+.shopping-cart{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        width: 100%;
+           }
+           @media screen and (min-width: 250px) and (max-width: 480px) {
+            width: 100%;
+        }
+    .table-view{
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2.3rem;
+        .specification{
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            .empty{
+                width: 50%;
+            }
+            ul{
+                width: 46%;
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                @media screen and (min-width: 481px) and (max-width: 767px) {
+                    margin-left: 0rem;
+                    margin-right: 5rem;
+                    text-align: center;
+                       }
+                       @media screen and (min-width: 250px) and (max-width: 480px) {
+                        margin-left: 0rem;
+                    margin-right: 11rem;
+                    text-align: center;
+                    }
+                    li{
+                        margin-right: 5rem;
+                        font-size: 1.4rem;
+                        @media screen and (min-width: 1024px) and (max-width: 1199px){
+                            margin-right: 2rem;
+                        }
+                        @media screen and (min-width: 250px) and (max-width: 480px) {
+                            
+                        margin-right: 3rem;
+                       
+                        }
+                       
+                    }
+            }
+        }
+        hr{
+            width: 90%;
+            border-color: grey;
+            height: 0.1px;
+        }
+        .product{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 2rem;
+            .product-img{
+                width: 50%;
+                margin-left: 6rem;
+                display: flex;
+                align-items: center;
+                @media screen and (min-width: 481px) and (max-width: 767px) {
+                    margin-left: 0rem;
+                       }
+                       @media screen and (min-width: 250px) and (max-width: 480px) {
+                        margin-left: 0rem;
+                    }
+                .headphones-photo{
+                    margin-left: 100px;
+                    @media screen and (min-width: 768px) and (max-width: 1023px){
+                     margin-left: 0px;
+                    }
+                    @media screen and (min-width: 250px) and (max-width: 480px) {
+                        margin-left: -0.5rem;
+                    }
+                    @media screen and (min-width: 481px) and (max-width: 767px) {
+                        margin-left: 0rem;
+                           }
+                }
+            }
+            .product-info{
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: -50px;
+                
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    list-style-type: none;
+                    align-items: center;
+                    justify-content: space-between;
+                    @media screen and (min-width: 768px) and (max-width: 1023px){
+                        margin-left: -1.5rem;
+                       }
+                       @media screen and (min-width: 481px) and (max-width: 767px) {
+                        margin-left: -2rem;
+                           }
+                           @media screen and (min-width: 250px) and (max-width: 480px) {
+                         margin-top: -150px;
+                         margin-left: -130px;
+                        }
+                      
+                        li{
+                            margin-right: 7.5rem;
+                            font-size: 1.2rem;
+                            display: flex;
+                            @media screen and (min-width: 1024px) and (max-width: 1199px){
+                                margin-right: 3.8rem;
+                            }
+                            @media screen and (min-width: 768px) and (max-width: 1023px){
+                                margin-right: 1rem;
+                               }
+                               @media screen and (min-width: 250px) and (max-width: 480px) {
+                                margin-right: 1.8rem;
+                            }
+                              
+                                   @media screen and (min-width: 481px) and (max-width: 767px) {
+                                    margin-left: -3.4rem;
+                                    margin-right: 7rem;
+                                       }
+                            .incdec{
+                                background-color: lightgrey;
+                                text-align: center;
+                                width: 24px;
+                                cursor: pointer;
+                                border: none;
+                                outline: none;
+                            }
+                            div{
+                                width: 25px;
+                                outline: none;
+                                border: 1px solid black;
+                                text-align: center;
+                                line-height: 25px;
+                            }
+                        }
+                }
+            }
+        }
+        .update-button{
+            margin-top: 1rem;
+            background-color: black;
+            width: 20rem;
+            color: white;
+            padding: 0.5rem 0.8rem;
+            margin-left: calc(100% - 255px);
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            @media screen and (min-width: 250px) and (max-width: 480px) {
+             margin-left: 20px;
+            }
+        }
+    }
+}

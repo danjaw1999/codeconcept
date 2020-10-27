@@ -1,0 +1,15 @@
+.bottom-view{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+           }
+           @media screen and (min-width: 250px) and (max-width: 480px) {
+            flex-direction: column;
+        }
+        @media screen and (min-width: 250px) and (max-width: 480px) {
+            flex-direction: column;
+        }
+}
