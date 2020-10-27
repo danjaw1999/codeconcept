@@ -5,7 +5,7 @@ import edit from "./assets/edit-img.png";
 import React, { useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
-  const value = 11.90;
+  const [value, setValue] = useState(11.90);
   const [shipping, setShipping] = useState(23.80);
   const [price, setPrice] = useState(0);
   const [submit, setSubmit] = useState(false);
@@ -22,6 +22,9 @@ function App() {
   }
   const handleDelete = () => {
     setProduct(true);
+    setValue(0);
+    setPrice(0);
+    setShipping(23.80);
   }
   return (
     <div className="container">
