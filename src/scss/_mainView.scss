@@ -1,6 +1,18 @@
 .container{
-    width: 1600px;
+    width: 1200px;
     margin: 0 auto;
+    @media screen and (min-width: 1024px) and (max-width: 1199px){
+        width: 900px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        width: 700px;
+    }
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+     width: 460px;
+        }
+        @media screen and (min-width: 250px) and (max-width: 480px) {
+            width: 240px;
+        }
     .main-view{
         display: flex;
         flex-direction: column;
@@ -13,6 +25,7 @@
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
+           
             h1{
                 font-size: 1.5rem;
                 font-weight: lighter;
@@ -32,12 +45,26 @@
             width: 100%;
             flex-direction: row;
             justify-content: space-between;
+            @media screen and (min-width: 481px) and (max-width: 767px) {
+                flex-direction: column;
+                   }
+                   @media screen and (min-width: 250px) and (max-width: 480px) {
+                    flex-direction: column;
+                }
+                @media screen and (min-width: 250px) and (max-width: 480px) {
+                    flex-direction: column;
+                }
         }
         .shopping-cart{
             display: flex;
             flex-direction: column;
             width: 70%;
-            
+            @media screen and (min-width: 481px) and (max-width: 767px) {
+                width: 100%;
+                   }
+                   @media screen and (min-width: 250px) and (max-width: 480px) {
+                    width: 100%;
+                }
             .table-view{
                 border: 1px solid grey;
                 display: flex;
@@ -58,9 +85,28 @@
                         display: flex;
                         flex-direction: row;
                         list-style-type: none;
+                        @media screen and (min-width: 481px) and (max-width: 767px) {
+                            margin-left: 0rem;
+                            margin-right: 5rem;
+                            text-align: center;
+                               }
+                               @media screen and (min-width: 250px) and (max-width: 480px) {
+                                margin-left: 0rem;
+                            margin-right: 11rem;
+                            text-align: center;
+                            }
                             li{
                                 margin-right: 5rem;
                                 font-size: 1.4rem;
+                                @media screen and (min-width: 1024px) and (max-width: 1199px){
+                                    margin-right: 2rem;
+                                }
+                                @media screen and (min-width: 250px) and (max-width: 480px) {
+                                    
+                                margin-right: 3rem;
+                               
+                                }
+                               
                             }
                     }
                 }
@@ -79,8 +125,23 @@
                         margin-left: 6rem;
                         display: flex;
                         align-items: center;
+                        @media screen and (min-width: 481px) and (max-width: 767px) {
+                            margin-left: 0rem;
+                               }
+                               @media screen and (min-width: 250px) and (max-width: 480px) {
+                                margin-left: 0rem;
+                            }
                         .headphones-photo{
                             margin-left: 100px;
+                            @media screen and (min-width: 768px) and (max-width: 1023px){
+                             margin-left: 0px;
+                            }
+                            @media screen and (min-width: 250px) and (max-width: 480px) {
+                                margin-left: -0.5rem;
+                            }
+                            @media screen and (min-width: 481px) and (max-width: 767px) {
+                                margin-left: 0rem;
+                                   }
                         }
                     }
                     .product-info{
@@ -89,16 +150,42 @@
                         flex-direction: row;
                         align-items: center;
                         margin-left: -50px;
+                        
                         ul{
                             display: flex;
                             flex-direction: row;
                             list-style-type: none;
                             align-items: center;
                             justify-content: space-between;
+                            @media screen and (min-width: 768px) and (max-width: 1023px){
+                                margin-left: -1.5rem;
+                               }
+                               @media screen and (min-width: 481px) and (max-width: 767px) {
+                                margin-left: -2rem;
+                                   }
+                                   @media screen and (min-width: 250px) and (max-width: 480px) {
+                                 margin-top: -150px;
+                                 margin-left: -130px;
+                                }
+                              
                                 li{
                                     margin-right: 7.5rem;
                                     font-size: 1.2rem;
                                     display: flex;
+                                    @media screen and (min-width: 1024px) and (max-width: 1199px){
+                                        margin-right: 3.8rem;
+                                    }
+                                    @media screen and (min-width: 768px) and (max-width: 1023px){
+                                        margin-right: 1rem;
+                                       }
+                                       @media screen and (min-width: 250px) and (max-width: 480px) {
+                                        margin-right: 1.8rem;
+                                    }
+                                      
+                                           @media screen and (min-width: 481px) and (max-width: 767px) {
+                                            margin-left: -3.4rem;
+                                            margin-right: 7rem;
+                                               }
                                     .incdec{
                                         background-color: lightgrey;
                                         text-align: center;
@@ -128,11 +215,23 @@
                     border: none;
                     cursor: pointer;
                     font-size: 1.4rem;
+                    @media screen and (min-width: 250px) and (max-width: 480px) {
+                     margin-left: 20px;
+                    }
                 }
             }
         }
         .basket-cart{  
             width: 28%;
+            @media screen and (min-width: 481px) and (max-width: 767px) {
+                width: 50%;
+                margin: 0 auto;
+                margin-top: 2rem;
+                   }
+                   @media screen and (min-width: 250px) and (max-width: 480px) {
+                    width: 100%;
+                    margin-top: 2rem;
+                   }
             .order{
                 background-color: lightgray;
                 border: 1px solid grey;
@@ -240,4 +339,10 @@
   }
   .pointer{
       cursor: pointer;
+  }
+  .send-message{
+      font-size: 2.2rem;
+      color: green;
+      text-align: center;
+      margin-top: 15rem;
   }
