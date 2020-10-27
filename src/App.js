@@ -6,7 +6,16 @@ import React, { useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
   const [value, setValue] = useState(11.90);
-  const [shipping, setshipping] = useState(23.80);
+  const [shipping, setShipping] = useState(23.80);
+  const [price, setPrice] = useState(0);
+  if (count < 0) {
+    setCount(0)
+  }
+  const handleClickValue = () => {
+    setPrice(value * count);
+    setShipping(value * count > 100 ? 0 : 23.80)
+  }
+
   return (
     <div className="container">
       <div className="main-view">
@@ -15,7 +24,6 @@ function App() {
           <button className="proceed-button">Proceed to checkout</button>
         </div>
         <div className="bottom-view">
-
           <div className="shopping-cart">
             <div className="table-view">
               <div className="specification">
@@ -37,20 +45,19 @@ function App() {
                     <li>Headphones</li>
                     <li>${value}</li>
                     <li>
-                      <button className="incdec" onClick={() => setCount(count - 1)}>-</button>
+                      <button className="incdec" onClick={() => setCount(count - 1)} >-</button>
                       <div>{count}</div>
-                      <button className="incdec" onClick={() => setCount(count + 1)}>+</button>
-                      <img src={edit} alt="edit_icon" className="pointer" />
+                      <button className="incdec" onClick={() => setCount(count + 1)} >+</button>
+                      <img src={edit} alt="edit_icon" className="pointer" onClick={handleClickValue} />
                     </li>
                   </ul>
                 </div>
               </div>
               <hr className="lower-line" />
-              <button className="update-button">Update Shopping Cart</button>
+              <button className="update-button" onClick={handleClickValue}>Update Shopping Cart</button>
             </div>
           </div>
           <div className="basket-cart">
-
             <div className="order">
               <div className="mini-container-in-basket">
                 <span>SHIPPING</span>
@@ -62,16 +69,14 @@ function App() {
                 <p>CART TOTALS</p>
               </div>
               <div className="mini-container-in-basket">
-
-
                 <div className="position-into-basket">
                   <span>Subtotal</span>
-                  <span className="price">${(value * count)}</span>
+                  <span className="price">${price.toFixed(2)}</span>
                 </div>
                 <hr />
                 <div className="resume-basket">
                   <span>Grand Total</span>
-                  <span className="price">$</span>
+                  <span className="price">${(price + shipping).toFixed(2)}</span>
                 </div>
                 <button>Proceed to checkout</button>
               </div>
