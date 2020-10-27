@@ -4,7 +4,6 @@
 
 ## Tech
 
-- ES6
 - React
 - CSS/SASS
 
