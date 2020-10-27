@@ -1,0 +1,69 @@
+.container{
+    width: 900px;
+    margin: 0 auto;
+    .main-view{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 3rem;
+        .shopping-cart{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            h1{
+                font-size: 2rem;
+                font-weight: lighter;
+            }
+            .table-view{
+                border: 1px solid grey;
+                display: flex;
+                flex-direction: column;
+                .specification{
+                    padding-top: 1rem;
+                    padding-bottom: 0rem;
+                    font-weight: bold;
+                    margin-left: 200px;
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        list-style-type: none;
+                            li{
+                                margin-right: 3rem;
+                                font-size: 1.4rem;
+                            }
+                    }
+                }
+                hr{
+                    width: 90%;
+                    border-color: grey;
+                    height: 0.1px;
+                }
+                .product{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding-top: 2rem;
+                    .product-img{
+                        width: 30%;
+                    }
+                    .product-info{
+                        display: flex;
+                        flex-direction: row;
+                        ul{
+                            display: flex;
+                            flex-direction: row;
+                            list-style-type: none;
+                                li{
+                                    margin-right: 3rem;
+                                    font-size: 1.4rem;
+                                    display: flex;
+                                }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+  
